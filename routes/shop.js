@@ -1,19 +1,23 @@
-const path = require('path');
+const path = require("path");
 
-const express = require('express');
+const express = require("express");
 
-const shopController = require('../controllers/shop');
+const shopController = require("../controllers/shop");
 
 const router = express.Router();
 
-router.get('/', shopController.getIndex);
+router.get("/", shopController.getIndex);
 
-router.get('/products', shopController.getProducts);
+router.get("/products", shopController.getProducts);
 
-router.get('/cart', shopController.getCart);
+router.get("/products/:productId"); // note the colon tells the express router that there will be a variable segement
 
-router.get('/orders', shopController.getOrders);
+// note at times that order may matter
 
-router.get('/checkout', shopController.getCheckout);
+router.get("/cart", shopController.getCart);
+
+router.get("/orders", shopController.getOrders);
+
+router.get("/checkout", shopController.getCheckout);
 
 module.exports = router;

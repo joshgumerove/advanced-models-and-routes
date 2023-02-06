@@ -10,7 +10,7 @@ router.get("/", shopController.getIndex);
 
 router.get("/products", shopController.getProducts);
 
-router.get("/products/:productId"); // note the colon tells the express router that there will be a variable segement
+router.get("/products/:productId", shopController.getProduct); // note the colon tells the express router that there will be a variable segement
 
 // note at times that order may matter
 

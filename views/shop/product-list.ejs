@@ -31,18 +31,17 @@
                                                 <a href="/products/<%=
                                                     product.id %>"
                                                     class="btn">Details</a>
-                                                <form action="/add-to-cart"
-                                                    method="POST">
-                                                    <button class="btn">Add to
-                                                        Cart</button>
-                                                </form>
-                                            </div>
-                                        </article>
-                                        <% } %>
-                                        </div>
-                                        <% } else { %>
-                                            <h1>No Products Found!</h1>
+                                                <%-include('../includes/add-to-cart.ejs',
+                                                    {product: product})
+                                                    %>
+                                                </div>
+                                            </article>
                                             <% } %>
-                                            </main>
-                                            <%- include('../includes/end.ejs')
-                                                %>
+                                            </div>
+                                            <% } else { %>
+                                                <h1>No Products Found!</h1>
+                                                <% } %>
+                                                </main>
+                                                <%-
+                                                    include('../includes/end.ejs')
+                                                    %>

@@ -17,4 +17,6 @@ router.post("/add-product", adminController.postAddProduct);
 
 router.get("/edit-product/:productId", adminController.getEditProduct);
 
+router.post("/edit-product", adminController.postEditProduct); // do not need to receive dynamic segment because is a post request
+
 module.exports = router;
